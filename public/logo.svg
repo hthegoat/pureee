@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(20, 40)">
+    <path d="M80 0L160 100L140 100L140 120L0 120L0 100L80 0Z" fill="#808080"/>
+    <path d="M100 40L120 70L80 70L100 40Z" fill="#0066ff"/>
+    <text x="30" y="95" font-family="Arial" font-weight="bold" font-size="24" fill="white">PURE</text>
+    <text x="95" y="95" font-family="Arial" font-style="italic" font-size="24" fill="#0066ff">Air</text>
+    <text x="40" y="115" font-family="Arial" font-size="12" fill="white">SOLUTIONS, LLC</text>
+  </g>
+</svg>

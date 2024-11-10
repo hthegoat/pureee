@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="PureAir Solutions">
+	<main>
+		<div class="hero">
+			<div class="hero-content animate-fade-in">
+				<h1>Your Trusted Partner in <span class="text-gradient">Healthy Indoor Air</span></h1>
+				<p class="tagline">Professional Mold Assessment, Indoor Air Quality Testing, and Remediation Services</p>
+				<div class="cta-buttons">
+					<a href="/contact" class="primary-button">Get Free Consultation</a>
+				
+				</div>
+			</div>
+		</div>
+
+		<section class="services animate-slide-up">
+			<h2>Our Services</h2>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="/services/mold-assessment"
+					title="Mold Assessment"
+					body="Comprehensive mold inspections using state-of-the-art detection equipment and sampling methods."
+				/>
+				<Card
+					href="/services/air-quality"
+					title="Air Quality Testing"
+					body="Advanced indoor air quality testing to identify pollutants, allergens, and harmful particles."
+				/>
+				<Card
+					href="/services/remediation"
+					title="Remediation Services"
+					body="Professional mold remediation and air quality improvement solutions for your property."
+				/>
+				<Card
+					href="/contact"
+					title="Free Consultation"
+					body="Schedule a free consultation with our certified specialists today."
+				/>
+			</ul>
+		</section>
+
+		<section class="why-us animate-slide-up">
+			<h2>Why Choose Us</h2>
+			<div class="features">
+				<div class="feature">
+					<h3>Certified Experts</h3>
+					<p>Licensed and certified professionals with years of experience</p>
+				</div>
+				<div class="feature">
+					<h3>Advanced Technology</h3>
+					<p>Latest equipment and testing methods for accurate results</p>
+				</div>
+				<div class="feature">
+					<h3>Quick Response</h3>
+					<p>24/7 emergency services and rapid response times</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonials animate-slide-up">
+			<h2>What Our Clients Say</h2>
+			<div class="testimonial-grid">
+				<div class="testimonial">
+					<div class="rating">★★★★★</div>
+					<p>"MoldGuard Pro's quick response and thorough assessment gave us peace of mind. Highly recommended!"</p>
+					<div class="author">- Sarah Johnson</div>
+				</div>
+				<div class="testimonial">
+					<div class="rating">★★★★★</div>
+					<p>"Professional team, detailed report, and excellent remediation service. Our air quality has improved significantly."</p>
+					<div class="author">- Michael Chen</div>
+				</div>
+				<div class="testimonial">
+					<div class="rating">★★★★★</div>
+					<p>"The team was knowledgeable, efficient, and kept us informed throughout the entire process."</p>
+					<div class="author">- Emily Rodriguez</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-banner animate-fade-in">
+			<div class="cta-content">
+				<h2>Ready to Improve Your Indoor Air Quality?</h2>
+				<p>Contact us today for a free consultation and take the first step towards a healthier environment.</p>
+				<a href="/contact" class="primary-button">Schedule Now</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.hero {
+		text-align: center;
+		padding: 6rem 0;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 1rem;
+		margin-bottom: 3rem;
+		position: relative;
+		overflow: hidden;
+	}
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at center, rgba(var(--accent-light), 0.1) 0%, transparent 70%);
+		pointer-events: none;
+	}
+	.hero-content {
+		position: relative;
+		z-index: 1;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+	}
+	.tagline {
+		font-size: 1.5rem;
+		color: rgb(var(--accent-light));
+		margin-bottom: 2rem;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	.primary-button {
+		background: rgb(var(--accent));
+		color: white;
+		padding: 0.8rem 2rem;
+		border-radius: 2rem;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+	.primary-button:hover {
+		background: rgb(var(--accent-light));
+		transform: translateY(-2px);
+	}
+	.secondary-button {
+		background: transparent;
+		color: white;
+		padding: 0.8rem 2rem;
+		border-radius: 2rem;
+		text-decoration: none;
+		font-weight: 600;
+		border: 2px solid rgb(var(--accent));
+		transition: all 0.3s ease;
+	}
+	.secondary-button:hover {
+		background: rgba(var(--accent), 0.1);
+		transform: translateY(-2px);
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.services, .why-us, .testimonials {
+		margin: 6rem 0;
+	}
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.why-us {
+		padding: 3rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 1rem;
+	}
+	.features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.feature {
+		text-align: center;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 0.5rem;
+		transition: transform 0.3s ease;
+	}
+	.feature:hover {
+		transform: translateY(-5px);
+	}
+	.feature h3 {
+		color: rgb(var(--accent-light));
+		margin-bottom: 1rem;
+	}
+	.testimonials {
+		padding: 4rem 0;
+	}
+	.testimonial-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+	.testimonial {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+	.testimonial:hover {
+		transform: translateY(-5px);
+	}
+	.rating {
+		color: rgb(var(--accent-light));
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	.author {
+		color: rgb(var(--accent-light));
+		margin-top: 1rem;
+		font-style: italic;
+	}
+	.cta-banner {
+		background: linear-gradient(45deg, rgb(var(--accent-dark)), rgb(var(--accent)));
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		margin: 6rem 0;
+	}
+	.cta-content h2 {
+		margin-bottom: 1rem;
+	}
+	.cta-content p {
+		margin-bottom: 2rem;
+		font-size: 1.2rem;
+	}
+	.animate-fade-in {
+		animation: fadeIn 1s ease-out;
+	}
+	.animate-slide-up {
+		animation: slideUp 1s ease-out;
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes slideUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>
